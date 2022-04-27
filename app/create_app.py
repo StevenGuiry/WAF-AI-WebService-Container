@@ -1,5 +1,5 @@
 from crypt import methods
-from flask import Flask, request
+from flask import Flask, request, render_template
 #from flask_cors import CORS
 import numpy as np
 import pickle
@@ -16,7 +16,7 @@ def create_app():
 
     @app.route("/")
     def index():
-        return "hello world"
+        return render_template('WAF-AI.html')
 
     @app.route('/predict', methods=['POST'])
     def get_prediction():
