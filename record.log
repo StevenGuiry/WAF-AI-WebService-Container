@@ -1,1 +1,20 @@
 2022-04-28 14:13:22,697 INFO app.create_app MainThread : [1, 2, 5, 0]
+2022-04-28 14:24:37,146 INFO app.create_app MainThread : [1, 3, 5, 0]
+2022-04-28 14:24:42,644 INFO app.create_app MainThread : [0, 12, 7, 0]
+2022-04-28 14:25:43,593 INFO app.create_app MainThread : [1, 12, 7, 0]
+2022-04-28 14:36:47,134 ERROR app.create_app MainThread : Exception on /predict [POST]
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 2077, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1525, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1523, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.9/site-packages/flask/app.py", line 1509, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/var/www/app/create_app.py", line 44, in get_prediction
+    sql_words += data.count(word)
+UnboundLocalError: local variable 'sql_words' referenced before assignment
+2022-04-28 14:39:11,376 INFO app.create_app MainThread : [1, 12, 7, 0]
+2022-04-28 14:39:20,497 INFO app.create_app MainThread : [0, 12, 7, 0]
+2022-04-28 14:40:07,812 INFO app.create_app MainThread : [1, 12, 7, 0]
