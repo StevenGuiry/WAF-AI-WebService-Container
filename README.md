@@ -17,3 +17,11 @@ Alternatively
 2. The WAF will respond within 200ms, if the response is 'bad' the user should either block the request or log it for review.
 
 ![image](https://user-images.githubusercontent.com/46968144/165644568-5bd64ac4-3163-4c6f-a48b-7905eb7f31b2.png)
+
+
+#### Some useful commands:
+
+* `docker-compose build` - builds entire image from scratch.
+* `docker-compose up` - runs the containers. `-d` option used to run in detach mode.
+* `docker-compose down` - stops running containers.
+* `docker-compose pull` - Updates images without rebuiding containers.
